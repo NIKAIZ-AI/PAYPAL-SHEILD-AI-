@@ -5,7 +5,7 @@ import {
   calculateTransactionRisk,
   DEFAULT_RISK_THRESHOLDS,
   DEFAULT_RISK_WEIGHTS,
-} from '../src/lib/riskEngine';
+} from '../src/lib/riskEngine.ts';
 import type {
   AppSettings,
   RiskEngineConfig,

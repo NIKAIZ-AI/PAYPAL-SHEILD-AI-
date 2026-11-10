@@ -5,7 +5,7 @@ import {
   calculateTransactionRisk,
   DEFAULT_RISK_THRESHOLDS,
   DEFAULT_RISK_WEIGHTS,
-} from '../src/lib/riskEngine';
+} from '../src/lib/riskEngine.ts';
 import type {
   ActivityPoint,
   AppSettings,
@@ -21,14 +21,14 @@ import {
   getDb,
   getStoredSettings,
   saveStoredSettings,
-} from './db';
-import { GEMINI_MODEL, generateRiskExplanation, isGeminiConfigured } from './gemini';
+} from './db.ts';
+import { GEMINI_MODEL, generateRiskExplanation, isGeminiConfigured } from './gemini.ts';
 import {
   captureLiveSandboxOrder,
   createLiveSandboxOrder,
   getLiveSandboxOrder,
   getPayPalConfigStatus,
-} from './paypal';
+} from './paypal.ts';
 
 const VALID_STATUSES: TransactionStatus[] = ['Completed', 'Pending', 'Failed', 'Captured'];
 const VALID_REVIEW_STATUSES: ReviewStatus[] = [
